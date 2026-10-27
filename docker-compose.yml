@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  learnlens-nlp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: learnlens-nlp-app
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+    restart: unless-stopped
